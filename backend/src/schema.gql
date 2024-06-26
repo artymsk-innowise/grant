@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type GrantDTO {
+  _id: String!
+  amount: Int!
+  areas: [String!]!
+  deadline: DateTime!
+  foundation: String!
+  location: String!
+  name: String!
+}
+
+type HiddenGrantDTO {
+  _id: String!
+  feedback: String!
+  grant: GrantDTO!
+}
+
+type Mutation {
+  hideGrant(feedback: String!, grantId: String!, userId: String!): HiddenGrantDTO!
+  saveGrant(feedback: String!, grantId: String!, userId: String!): SavedGrantDTO!
+}
+
+type Query {
+  grantsMatches(userId: String!): [GrantDTO!]!
+  savedGrants(userId: String!): [SavedGrantDTO!]!
+}
+
+type SavedGrantDTO {
+  _id: String!
+  feedback: String!
+  grant: GrantDTO!
+  matchDate: DateTime!
+  status: String!
+}

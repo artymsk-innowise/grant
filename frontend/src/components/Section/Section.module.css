@@ -1,0 +1,16 @@
+.section {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section > *:first-child {
+  margin-bottom: 20px;
+}
+
+.section:first-child {
+  margin-top: 60px;
+}
+
+.section:last-child {
+  margin-top: 20px;
+}

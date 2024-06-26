@@ -1,0 +1,49 @@
+.grantItem {
+  position: relative;
+  align-self: stretch;
+  width: 300px;
+  border: 2px solid #d6d6d6;
+  gap: 20px;
+  padding: 20px 20px;
+  border-radius: 20px;
+}
+
+.card:hover {
+  border: 2px solid #f08764;
+}
+
+.card:hover > .applyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.averageAmount {
+  background-color: #fff0eb;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dollarIcon {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  color: #f08764;
+}
+
+.dates {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.applyButton {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+}
